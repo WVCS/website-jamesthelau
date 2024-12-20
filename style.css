@@ -1,3 +1,110 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* Set background with a dark gradient animation */
+body {
+  background: linear-gradient(45deg, #ff00fe, #00fffe); /* Fixed color codes */
+  background-size: 400% 400%;
+  animation: gradientBackground 10s ease infinite;
+  font-family: "Arial", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 20px;
+  z-index: 1000; /* Make sure the navbar stays on top */
+}
+
+.navbar-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.navbar-links li {
+  margin: 0 20px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #ff00fe; /* Change color on hover */
+  transform: scale(1.1); /* Slightly grow the text */
+}
+
+/* Main content container */
+.content {
+  text-align: center;
+  margin-top: 80px; /* Space for the navbar */
+}
+
+/* Title styling with glowing effect */
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px #ff00fe, 0 0 20px #00fffe; /* Glow effect */
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Title hover effect (scaling and glowing more) */
+.title:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 30px #ff00fe, 0 0 50px #00fffe; /* More glow */
+}
+
+/* Singing dog image styling with bounce effect */
+.singing-dog {
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
+  animation: imageBounce 2s ease-in-out infinite;
+}
+
+/* Bounce effect for the singing dog */
+@keyframes imageBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animated background gradient */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
