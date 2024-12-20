@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 /* Set background with a dark gradient animation */
 body {
   background: linear-gradient(45deg, #ff00fe, #00fffe); /* Fixed color codes */
