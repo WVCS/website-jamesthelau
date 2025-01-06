@@ -10,13 +10,13 @@ body {
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
   font-family: "Arial", sans-serif;
-  height: 100vh;
+  min-height: 100vh; /* Ensure the body can grow beyond the viewport */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   color: white;
-  overflow: hidden;
+  overflow: auto; /* Allow scrolling when content overflows */
 }
 
 /* Navigation Bar Styling */
@@ -57,7 +57,7 @@ body {
 /* Main content container */
 .content {
   text-align: center;
-  margin-top: 100px; /* Adjusted space to prevent overlap with navbar */
+  margin-top: 120px; /* Adjust space to prevent overlap with navbar */
   padding: 0 20px;
   width: 100%;
 }
@@ -127,7 +127,7 @@ body {
   }
 
   .game-container::before {
-    padding-top: 56.25%; /* Keep aspect ratio on smaller screens */
+    padding-top: 56.25%; /* Maintain aspect ratio on smaller screens */
   }
 
   .game-container iframe {
