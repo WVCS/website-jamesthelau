@@ -10,13 +10,13 @@ body {
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
   font-family: "Arial", sans-serif;
-  min-height: 100vh; /* Use min-height to ensure it can grow with content */
+  min-height: 100%; /* Change to min-height to allow scrolling */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   color: white;
-  overflow: auto; /* Allow scrolling */
+  overflow: auto; /* Allows scrolling */
 }
 
 /* Navigation Bar Styling */
@@ -106,16 +106,5 @@ body {
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-
-/* Responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem; /* Smaller font size on mobile */
-  }
-
-  .singing-dog {
-    width: 250px; /* Adjust image size for smaller screens */
   }
 }
