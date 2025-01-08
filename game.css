@@ -10,7 +10,7 @@ body {
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
   font-family: "Arial", sans-serif;
-  height: 100%; /* Changed from 100vh to allow scrolling */
+  height: 100%; /* Allows scrolling */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
