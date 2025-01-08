@@ -6,17 +6,17 @@
 
 /* Set background with a dark gradient animation */
 body {
-  background: linear-gradient(45deg, #ff00fe, #00fffe); /* Fixed color codes */
+  background: linear-gradient(45deg, #ff00fe, #00fffe); 
   background-size: 400% 400%;
   animation: gradientBackground 10s ease infinite;
   font-family: "Arial", sans-serif;
-  height: 100%; /* Allows scrolling */
+  height: auto; /* Fixed to allow for scrolling */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   color: white;
-  overflow: auto; /* Allows scrolling */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* Navigation Bar Styling */
@@ -25,9 +25,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.5); 
   padding: 15px 20px;
-  z-index: 1000; /* Make sure the navbar stays on top */
+  z-index: 1000;
 }
 
 .navbar-links {
@@ -50,14 +50,14 @@ body {
 }
 
 .navbar-links a:hover {
-  color: #ff00fe; /* Change color on hover */
-  transform: scale(1.1); /* Slightly grow the text */
+  color: #ff00fe;
+  transform: scale(1.1);
 }
 
 /* Main content container */
 .content {
   text-align: center;
-  margin-top: 100px; /* Adjusted space to prevent overlap with navbar */
+  margin-top: 100px; 
   padding: 0 20px;
   width: 100%;
 }
@@ -67,7 +67,7 @@ body {
   font-size: 4rem;
   font-weight: bold;
   color: white;
-  text-shadow: 0 0 10px #ff00fe, 0 0 20px #00fffe; /* Glow effect */
+  text-shadow: 0 0 10px #ff00fe, 0 0 20px #00fffe;
   margin-bottom: 30px;
   transition: transform 0.3s ease, text-shadow 0.3s ease;
   cursor: pointer;
@@ -76,7 +76,7 @@ body {
 /* Title hover effect (scaling and glowing more) */
 .title:hover {
   transform: scale(1.1);
-  text-shadow: 0 0 30px #ff00fe, 0 0 50px #00fffe; /* More glow */
+  text-shadow: 0 0 30px #ff00fe, 0 0 50px #00fffe;
 }
 
 /* Game container to center the iframe */
@@ -95,7 +95,7 @@ body {
 .game-container::before {
   content: '';
   display: block;
-  padding-top: 56.25%; /* Aspect ratio 16:9 */
+  padding-top: 56.25%; 
 }
 
 .game-container iframe {
@@ -127,7 +127,7 @@ body {
   }
 
   .game-container::before {
-    padding-top: 56.25%; /* Keep aspect ratio on smaller screens */
+    padding-top: 56.25%;
   }
 
   .game-container iframe {
